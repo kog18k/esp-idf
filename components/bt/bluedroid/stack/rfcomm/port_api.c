@@ -367,7 +367,7 @@ int PORT_SetDataCallback (UINT16 port_handle, tPORT_DATA_CALLBACK *p_port_cb)
 {
     tPORT  *p_port;
 
-    RFCOMM_TRACE_API ("PORT_SetDataCallback() handle:%d cb 0x%x", port_handle, p_port_cb);
+    RFCOMM_TRACE_API ("PORT_SetDataCallback() handle:%d cb 0x%x", port_handle, (unsigned int)p_port_cb);
 
     /* Check if handle is valid to avoid crashing */
     if ((port_handle == 0) || (port_handle > MAX_RFC_PORTS)) {
@@ -401,7 +401,7 @@ int PORT_SetDataCOCallback (UINT16 port_handle, tPORT_DATA_CO_CALLBACK *p_port_c
 {
     tPORT  *p_port;
 
-    RFCOMM_TRACE_API ("PORT_SetDataCOCallback() handle:%d cb 0x%x", port_handle, p_port_cb);
+    RFCOMM_TRACE_API ("PORT_SetDataCOCallback() handle:%d cb 0x%x", port_handle, (unsigned int)p_port_cb);
 
     /* Check if handle is valid to avoid crashing */
     if ((port_handle == 0) || (port_handle > MAX_RFC_PORTS)) {
